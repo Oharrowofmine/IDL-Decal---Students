@@ -1,0 +1,11 @@
+ function madlibs, in_array
+   size = n_elements(in_array)
+   answers = make_array(1, size, /string)
+
+   print, answers
+   ;for i = 0, i LT size do begin
+    ;response = ''
+      ;read, 'Please provide a ' + in_arr[2,i], response
+      ;answers[1,i] = response
+   ;endfor
+end 

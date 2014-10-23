@@ -1,0 +1,12 @@
+ function gimmedata, filename
+   filename = 'one.txt'  
+  readcol, filename, col1, col2, col3, format='A,A,A', delimit = ',' ;reads the strings of data and puts it into 3 columns, chosen for each column by commas in the original string
+ 
+  col_arr = make_array(3, n_elements(col1), /string) ; creates an empty 3 by n_elements of the first column array that we will then stick column values into
+  
+  col_arr[0,*] = col1 ;inserts column 1 into place 0 of the array
+  col_arr[1,*] = col2 ;inserts column 2 into place 1 of the array
+  col_arr[2,*] = col3 ;inserts column 3 into place 2 of the array
+  
+  print, col_arr ;should return array? function not exactly working...
+  end  
